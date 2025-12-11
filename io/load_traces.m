@@ -23,8 +23,8 @@ for ii = 2:n_repeats
     "Repeating:"+ii
     instr_vect = [instr_vect; instr_inputs(:,2)];
     instr_time = [instr_time; str2double(instr_inputs(:,1)) + end_time*(ii-1)];
-    time_trace = [time_trace; time_trace + end_time*(ii-1)];
-    current_trace = [current_trace; current_trace];
+    time_trace = [time_trace; inputs(:,1) + end_time*(ii-1)];
+    current_trace = [current_trace; inputs(:,2);];
 end
 end_time = time_trace(length(time_trace));
 

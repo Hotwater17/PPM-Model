@@ -125,7 +125,7 @@ for ii = 2:traces.vect_len
                 end
                 integ_corrs = [integ_corrs global_integ_corr];
                 integ_trace = [integ_trace global_comp_accum];
-                global_comp_accum = 0;%floor(global_comp_accum*proact_cfg.decay_factor);
+                global_comp_accum = floor(global_comp_accum*proact_cfg.decay_factor);
             end
         end
         
